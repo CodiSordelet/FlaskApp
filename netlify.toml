@@ -1,0 +1,13 @@
+[build]
+  # Set your build command
+  command = "pip install -r requirements.txt && python src/app.py"
+
+  # Specify the directory to publish (where your Flask app resides)
+  publish = "src"
+
+[[redirects]]
+  # Redirect all requests to the Flask app
+  from = "/*"
+  to = "/app.py"
+  status = 200
+
